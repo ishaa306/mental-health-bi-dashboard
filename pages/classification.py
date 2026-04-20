@@ -108,11 +108,10 @@ feature_cols = [
 
 # Fill missing values
 for col in feature_cols + ["Stress_Level"]:
-    if df[col].dtype == "object":
-        df[col] = df[col].fillna(df[col].mode()[0])
-    else:
+    if pd.api.types.is_numeric_dtype(df[col]):
         df[col] = df[col].fillna(df[col].mean())
-
+    else:
+        df[col] = df[col].fillna(df[col].mode()[0])
 encoders = {}
 
 for col in [
