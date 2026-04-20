@@ -166,7 +166,7 @@ rf_acc = accuracy_score(y_test, rf_pred)
 # ───────────────────────────────────────────────────────────
 # TITLE
 # ───────────────────────────────────────────────────────────
-st.title("📊 Stress Level Classification")
+st.title(" Stress Level Classification")
 st.markdown(
     "Predicting whether a patient belongs to the 🟢 Normal or 🔴 High Risk category."
 )
