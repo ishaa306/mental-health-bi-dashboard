@@ -99,7 +99,7 @@ st.sidebar.markdown("""
 """)
 
 # ─── MAIN PAGE ─────────────────────────────────────────────
-st.title(" Global Mental Health )
+st.title(" Global Mental Health" )
 
 st.markdown("---")
 
@@ -114,7 +114,7 @@ process — from raw data exploration to machine learning predictions and action
 """, unsafe_allow_html=True)
 
 # ─── KEY STATS ─────────────────────────────────────────────
-st.markdown("<div class='section-header'>📊 Dataset at a Glance</div>", unsafe_allow_html=True)
+st.markdown("<div class='section-header'> Dataset at a Glance</div>", unsafe_allow_html=True)
 
 col1, col2, col3, col4 = st.columns(4)
 with col1:
