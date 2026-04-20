@@ -14,7 +14,6 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 # ───────────────────────────────────────────────────────────
 st.set_page_config(
     page_title="Classification",
-    page_icon="📊",
     layout="wide"
 )
 
@@ -175,7 +174,7 @@ st.markdown(
 # ───────────────────────────────────────────────────────────
 # ACCURACY
 # ───────────────────────────────────────────────────────────
-st.markdown("<div class='section-header'>🎯 Model Accuracy</div>", unsafe_allow_html=True)
+st.markdown("<div class='section-header'> Model Accuracy</div>", unsafe_allow_html=True)
 
 c1, c2 = st.columns(2)
 
@@ -198,7 +197,7 @@ with c2:
 # ───────────────────────────────────────────────────────────
 # COMPARISON CHART
 # ───────────────────────────────────────────────────────────
-st.markdown("<div class='section-header'>📈 Algorithm Comparison</div>", unsafe_allow_html=True)
+st.markdown("<div class='section-header'>Algorithm Comparison</div>", unsafe_allow_html=True)
 
 compare_df = pd.DataFrame({
     "Algorithm": ["KNN", "Random Forest"],
@@ -226,7 +225,7 @@ st.plotly_chart(fig, use_container_width=True)
 # ───────────────────────────────────────────────────────────
 # CONFUSION MATRIX
 # ───────────────────────────────────────────────────────────
-st.markdown("<div class='section-header'>🧩 KNN Confusion Matrix</div>", unsafe_allow_html=True)
+st.markdown("<div class='section-header'> KNN Confusion Matrix</div>", unsafe_allow_html=True)
 
 cm = confusion_matrix(y_test, knn_pred)
 
@@ -241,7 +240,7 @@ st.dataframe(cm_df, use_container_width=True)
 # ───────────────────────────────────────────────────────────
 # FEATURE IMPORTANCE
 # ───────────────────────────────────────────────────────────
-st.markdown("<div class='section-header'>⭐ Most Important Features</div>", unsafe_allow_html=True)
+st.markdown("<div class='section-header'> Most Important Features</div>", unsafe_allow_html=True)
 
 importance_df = pd.DataFrame({
     "Feature": feature_cols,
@@ -273,22 +272,21 @@ st.markdown("<div class='section-header'>🔍 Patient Risk Predictor</div>", uns
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    p_age = st.number_input("🎂 Age", 10, 100, 30)
-    p_dep = st.number_input("😔 Depression Score", 0, 30, 10)
-    p_sleep = st.number_input("😴 Sleep Hours", 0.0, 12.0, 7.0)
-    p_days = st.number_input("💊 Days of Treatment", 0, 365, 30)
+    p_age = st.number_input(" Age", 10, 100, 30)
+    p_dep = st.number_input(" Depression Score", 0, 30, 10)
+    p_sleep = st.number_input(" Sleep Hours", 0.0, 12.0, 7.0)
+    p_days = st.number_input(" Days of Treatment", 0, 365, 30)
 
 with col2:
-    p_gender = st.selectbox("👤 Gender", ["Male", "Female"])
-    p_country = st.selectbox("🌍 Country", sorted(load_data()["Country"].dropna().unique()))
-    p_anx = st.number_input("😰 Anxiety Score", 0, 30, 8)
-    p_activity = st.selectbox("🏃 Physical Activity", ["Low", "Moderate", "High"])
+    p_gender = st.selectbox(" Gender", ["Male", "Female"])
+    p_anx = st.number_input(" Anxiety Score", 0, 30, 8)
+    p_activity = st.selectbox(" Physical Activity", ["Low", "Moderate", "High"])
 
 with col3:
-    p_chronic = st.selectbox("🩺 Chronic Illness", ["No", "Yes"])
-    p_history = st.selectbox("🧠 Mental Health History", ["No", "Yes"])
-    p_treatment = st.selectbox("💉 Treatment", sorted(load_data()["Treatment"].dropna().unique()))
-    p_work = st.selectbox("💼 Work Status", sorted(load_data()["Work_Status"].dropna().unique()))
+    p_chronic = st.selectbox(" Chronic Illness", ["No", "Yes"])
+    p_history = st.selectbox("Mental Health History", ["No", "Yes"])
+    p_treatment = st.selectbox(" Treatment", sorted(load_data()["Treatment"].dropna().unique()))
+    p_work = st.selectbox(" Work Status", sorted(load_data()["Work_Status"].dropna().unique()))
     predict_btn = st.button("Predict Risk", use_container_width=True)
 
 if predict_btn:
