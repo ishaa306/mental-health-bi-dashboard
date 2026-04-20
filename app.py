@@ -231,7 +231,7 @@ algos = [
     ("K-Means Clustering", "Unsupervised", "Groups students into behavioral cohorts based on usage patterns.", "#ed8936"),
     ("Apriori Rules", "Pattern Mining", "Discovers hidden behavioral associations in the dataset.", "#9f7aea"),
 ]
-for col, (icon, name, atype, desc, color) in zip([acol1, acol2, acol3, acol4], algos):
+for col, ( name, atype, desc, color) in zip([acol1, acol2, acol3, acol4], algos):
     with col:
         st.markdown(f"""
         <div style='background:#1a1f2e; border:1px solid {color}; border-radius:10px; 
