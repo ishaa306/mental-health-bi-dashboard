@@ -207,7 +207,7 @@ with col_right:
     </div>""", unsafe_allow_html=True)
 
 # ─── ALGORITHMS USED ───────────────────────────────────────
-st.markdown("<div class='section-header'>🤖 Algorithms Used</div>", unsafe_allow_html=True)
+st.markdown("<div class='section-header'> Algorithms Used</div>", unsafe_allow_html=True)
 
 acol1, acol2, acol3, acol4 = st.columns(4)
 algos = [
