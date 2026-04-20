@@ -82,21 +82,6 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# ─── SIDEBAR ───────────────────────────────────────────────
-st.sidebar.image("https://img.icons8.com/fluency/96/brain.png", width=60)
-st.sidebar.title(" Mental Health BI")
-st.sidebar.markdown("*Behavioral Analytics & ML Platform*")
-st.sidebar.markdown("---")
-st.sidebar.markdown("### Navigation")
-st.sidebar.markdown("Use the pages below to explore the project:")
-st.sidebar.markdown("""
-- **Home** ← You are here
-- **Exploration** — Data insights
-- **Clustering** — K-Means
-- **Classification** — LR + DT
-- **Association** — Apriori Rules
-- **Comparison** — Algorithm results
-""")
 
 # ─── MAIN PAGE ─────────────────────────────────────────────
 st.title(" Global Mental Health" )
@@ -247,6 +232,6 @@ for col, ( name, atype, desc, color) in zip([acol1, acol2, acol3, acol4], algos)
 st.markdown("<br><br>", unsafe_allow_html=True)
 st.markdown("""
 <div style='text-align:center; color:#4a5568; padding:20px; border-top:1px solid #2d3748'>
-     Global Mental Health BI Dashboard | Built with Streamlit | Dataset: Kaggle 2025
+     
 </div>
 """, unsafe_allow_html=True)
