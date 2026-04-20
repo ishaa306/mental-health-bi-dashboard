@@ -2,7 +2,6 @@ import streamlit as st
 
 st.set_page_config(
     page_title="Mental Health BI",
-    page_icon="🧠",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -85,29 +84,29 @@ st.markdown("""
 
 # ─── SIDEBAR ───────────────────────────────────────────────
 st.sidebar.image("https://img.icons8.com/fluency/96/brain.png", width=60)
-st.sidebar.title("🧠 Mental Health BI")
+st.sidebar.title(" Mental Health BI")
 st.sidebar.markdown("*Behavioral Analytics & ML Platform*")
 st.sidebar.markdown("---")
 st.sidebar.markdown("### Navigation")
 st.sidebar.markdown("Use the pages below to explore the project:")
 st.sidebar.markdown("""
-- 🏠 **Home** ← You are here
-- 🔍 **Exploration** — Data insights
-- 🔵 **Clustering** — K-Means
-- 📊 **Classification** — LR + DT
-- 🔗 **Association** — Apriori Rules
-- ⚡ **Comparison** — Algorithm results
+- **Home** ← You are here
+- **Exploration** — Data insights
+- **Clustering** — K-Means
+- **Classification** — LR + DT
+- **Association** — Apriori Rules
+- **Comparison** — Algorithm results
 """)
 
 # ─── MAIN PAGE ─────────────────────────────────────────────
-st.title("🧠 Global Mental Health & Social Media Addiction")
-st.markdown("### Business Intelligence Mini Project | 2025")
+st.title(" Global Mental Health )
+
 st.markdown("---")
 
 # Project description
 st.markdown("""
 <div class='highlight-box'>
-<b>📌 Project Overview</b><br><br>
+<b> Project Overview</b><br><br>
 This application is a comprehensive <b>Business Intelligence tool</b> for analyzing the 
 <b>Global Mental Health Dataset 2025</b>. It covers the end-to-end <b>KDD (Knowledge Discovery in Databases)</b> 
 process — from raw data exploration to machine learning predictions and actionable BI decisions.
@@ -175,7 +174,7 @@ with col_left:
     <div class='dim-table'>
         <b style='color:#48bb78'>Dim_Student</b><br>
         <small style='color:#a0aec0'>
-        🔑 student_id<br>age<br>gender<br>country<br>academic_level
+         student_id<br>age<br>gender<br>country<br>academic_level
         </small>
     </div>""", unsafe_allow_html=True)
     st.markdown("<br>", unsafe_allow_html=True)
@@ -227,10 +226,10 @@ st.markdown("<div class='section-header'>🤖 Algorithms Used</div>", unsafe_all
 
 acol1, acol2, acol3, acol4 = st.columns(4)
 algos = [
-    ("📈", "Logistic Regression", "Supervised", "Predicts addiction risk (High/Low) based on usage and sleep patterns.", "#4e9af1"),
-    ("🌳", "Decision Tree", "Supervised", "Creates visual decision paths to classify student behavior.", "#48bb78"),
-    ("🔵", "K-Means Clustering", "Unsupervised", "Groups students into behavioral cohorts based on usage patterns.", "#ed8936"),
-    ("🔗", "Apriori Rules", "Pattern Mining", "Discovers hidden behavioral associations in the dataset.", "#9f7aea"),
+    ("Logistic Regression", "Supervised", "Predicts addiction risk (High/Low) based on usage and sleep patterns.", "#4e9af1"),
+    ("Decision Tree", "Supervised", "Creates visual decision paths to classify student behavior.", "#48bb78"),
+    ("K-Means Clustering", "Unsupervised", "Groups students into behavioral cohorts based on usage patterns.", "#ed8936"),
+    ("Apriori Rules", "Pattern Mining", "Discovers hidden behavioral associations in the dataset.", "#9f7aea"),
 ]
 for col, (icon, name, atype, desc, color) in zip([acol1, acol2, acol3, acol4], algos):
     with col:
